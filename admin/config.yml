@@ -1,0 +1,16 @@
+backend:
+  name: git-gateway
+  branch: main # Change to your default branch
+
+media_folder: "images" # Media files storage
+public_folder: "/images"
+
+collections:
+  - name: "drumkit" # The name of the collection
+    label: "Drum Kit Sounds"
+    folder: "sounds" # Where files are stored
+    create: true
+    slug: "{{slug}}" # URL format
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Sound File", name: "sound", widget: "file" }
